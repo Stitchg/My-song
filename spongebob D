@@ -1,0 +1,143 @@
+
+use_bpm 136
+use_synth :piano
+
+live_loop:background_notes do
+  play:E3, amp: 0.25
+  sleep 1
+  play:B3, amp: 0.25
+  play:E4, amp: 0.25
+  sleep 1
+  play:B3, amp: 0.25
+  sleep 1
+  play:E4, amp: 0.25
+  sleep 1
+  
+  play:E3, amp: 0.5
+  sleep 1
+  play:B3, amp: 0.5
+  play:E4, amp: 0.5
+  sleep 1
+  play:B3, amp: 0.5
+  sleep 1
+  play:E4, amp: 0.5
+  sleep 1
+  
+  play:E3, amp: 0.75
+  sleep 1
+  play:B3, amp: 0.75
+  play:E4, amp: 0.75
+  sleep 1
+  play:B3, amp: 0.75
+  sleep 1
+  play:E4, amp: 0.75
+  sleep 1
+  
+  5.times do
+    play:E3, amp: 1
+    sleep 1
+    play:B3, amp: 1
+    play:E4, amp: 1
+    sleep 1
+    play:B3, amp: 1
+    sleep 1
+    play:E4, amp: 1
+    sleep 1
+  end
+  stop
+end
+
+#start defining
+
+# Measure 3 4 6
+
+define :the_notes346 do
+  play :r
+  sleep 1
+  play:E5
+  play:Gs4
+  play:B4
+  sleep 1
+  play:B4
+  sleep 1
+  play:E5
+  play:Gs4
+  sleep 1
+end
+
+# Measure 2 8
+define :the_notes28 do
+  play:E4
+  sleep 1
+  play:E5
+  play:Gs4
+  sleep 2
+  play:E5
+  play:Gs4
+  sleep 1
+end
+
+# Measures 5 7
+define :the_notes57 do
+  play:B4
+  sleep 0.75
+  play:As4
+  sleep 0.25
+  play:Gs4
+  play:B4
+  sleep 0.75
+  play:Cs5
+  sleep 0.25
+  play:B4
+  sleep 1
+  play:Gs4
+  play:E5
+  sleep 1
+end
+
+
+#end defining
+
+
+live_loop :bass do
+  16.times do
+    sleep 1
+    sample :drum_bass_hard
+    sleep 1
+  end
+  stop
+end
+# Measure 1
+play :r
+sleep 1
+play:E4
+play:Gs4
+sleep 2
+play:E5
+play:Gs4
+sleep 1
+
+
+# Measure 2
+the_notes28
+
+
+# Measure 3
+the_notes346
+
+# Measure 4
+the_notes346
+
+# Measure 5
+the_notes57
+
+# Measure 6
+the_notes346
+
+# Measure 7
+the_notes57
+
+# Measure 8
+the_notes28
+sample "C:/Users/jose_gutierrez/Desktop/Boom sound effect.mp3"
+sleep 2
