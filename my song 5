@@ -1,0 +1,20 @@
+live_loop :foo do
+  use_synth :prophet
+  play :e1, release: 8, cutoff: rrand(70, 130)
+  sleep 8
+end
+
+
+
+
+play 36
+play 48
+sample :ambi_lunar_land
+sample :ambi_drone
+
+
+
+live_loop :foo do
+  play 60
+  sleep 0.15
+end
