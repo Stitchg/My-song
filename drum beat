@@ -1,0 +1,12 @@
+live_loop :beat do
+  sample :bd_haus
+  sleep 1
+end
+live_loop :melody do
+  sample :loop_amen
+  sleep 4
+end
+live_loop :drums do
+  sample :drum_cymbal_closed
+  sleep 0.5
+end
