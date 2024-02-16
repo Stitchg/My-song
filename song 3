@@ -1,0 +1,106 @@
+use_bpm 60
+live_loop :foo do
+  use_synth :prophet
+  play :e1, release: 8, cutoff: rrand(70, 130)
+  sleep 8
+end
+
+live_loop :beat do
+  sample :bd_haus
+  sleep 1
+end
+live_loop :melody do
+  sample :loop_amen
+  sleep 4
+end
+live_loop :drums do
+  sample :drum_cymbal_closed
+  sleep 0.5
+end
+
+
+live_loop :beat do
+  sample :bd_haus, amp: 0.5
+  sleep 1
+end
+
+live_loop :idk do
+  play 36
+  play 48
+  sample :ambi_lunar_land
+  sample :ambi_drone
+  sleep 12
+end
+
+live_loop :beat2 do
+  sample :loop_breakbeat,  beat_stretch: 2
+  sleep 1
+end
+live_loop :drums do
+  sample :drum_cymbal_closed, amp: 0.4
+  sleep 0.5
+end
+
+live_loop :beat do
+  sample :bd_chip, amp: 0.5
+  sleep 1
+end
+live_loop :beat2 do
+  sample :loop_3d_printer,  beat_stretch: 2
+  sleep 1
+end
+live_loop :drums do
+  sample :drum_cymbal_hard, amp: 0.4
+  sleep 0.5
+end
+live_loop :drums do
+  sample :drum_bass_hard
+  sleep 0.5
+end
+live_loop :jose_gutierrez do
+  play 36
+  play 48
+  sample :ambi_lunar_land
+  3.times do
+    play 25
+    play 60
+    play 50
+  end
+  sample :ambi_drone
+  play 60
+  sleep 1
+  play 60
+  sleep 1
+  play 60
+  sleep 3
+  
+  play 15
+  play 15
+  sleep 1
+  
+  play 15
+  play 60
+  play 15
+  sleep 1
+  play 55
+  play 15
+  play 15
+  sleep 1
+  play 60
+  play 15
+  play 15
+  sleep 1
+  play 56
+  play 15
+  play 15
+  sleep 1
+  play 60
+  play 15
+  play 15
+  sleep 2
+  play 55
+  play 15
+  play 15
+  sleep 4
+  
+end
