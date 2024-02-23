@@ -1,0 +1,76 @@
+# MY Jeopardy Theme Song
+use_bpm 120
+define :the_notes do
+  play :A4
+  sleep 1
+  play :D5
+  sleep 1
+  play :A4
+  sleep 1
+  play :D4
+  sleep 1
+  
+  
+  play :A4
+  sleep 1
+  play :D5
+  sleep 1
+  play :A4
+  sleep 2
+  
+  
+  play :A4
+  sleep 1
+  play :D5
+  sleep 1
+  play :A4
+  sleep 1
+  play :D5
+  sleep 1
+  
+  
+  play :Fs5
+  sleep 1
+  play :r
+  sleep 0.5
+  play :E5
+  sleep 0.5
+  play :D5
+  sleep 0.5
+  play :Cs5
+  sleep 0.5
+  play :B4
+  sleep 0.5
+  play :Bb4
+  sleep 0.5
+end
+
+
+live_loop :keep do
+  5.times do
+    the_notes
+  end
+  stop
+end
+live_loop :bass do
+  74.times do
+    sleep 1
+    sample :drum_bass_hard, amp: 0.2
+    sleep 0.1
+  end
+  stop
+end
+live_loop :idk do
+  20.times do
+    sleep 4
+    use_synth :tb303
+    sample :drum_splash_soft, amp: 0.2
+    sleep 0.1
+  end
+  stop
+end
+
+
+sleep 80
+sample "C:/Users/jose_gutierrez/Desktop/Boom sound effect.mp3"
+sleep 2
