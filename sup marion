@@ -1,0 +1,90 @@
+# Challenge E
+use_bpm 180
+use_synth :chipbass
+
+# VARIABLES TO STORE SAMPLES
+intro = "C:/Users/jose_gutierrez/Downloads/mario_sounds/mario_sounds/mario_intro.wav"
+mariosoundB = "C:/Users/jose_gutierrez/Downloads/mario_sounds/mario_sounds/mario_beat.wav"
+mariosoundP = "C:/Users/jose_gutierrez/Downloads/mario_sounds/mario_sounds/pipe.wav"
+mariosoundU = "C:/Users/jose_gutierrez/Downloads/mario_sounds/mario_sounds/oneup.wav"
+mariosoundM = "C:/Users/jose_gutierrez/Downloads/mario_sounds/mario_sounds/mushroom.wav"
+
+sample
+define :music1 do
+  # INTRO
+  play :e4
+  sleep 0.5
+  play :e4
+  sleep 1
+  play :e4
+  sleep 1
+  play :c4
+  sleep 0.5
+  play :e4
+  sleep 1
+  play :g4
+  sleep 2
+  play :g3
+  sleep 2
+end
+
+define :music2 do
+  # PART ONE
+  play :c4
+  sleep 1.5
+  play :g3
+  sleep 1.5
+  play :e3
+  sleep 1.5
+  play :a3
+  sleep 1
+  play :b3
+  sleep 1
+  play :bb3
+  sleep 0.5
+  play :a3
+  sleep 1
+end
+
+define :music3 do
+  #PART TWO
+  play :g3
+  sleep 2/3.0 #0.666666...
+  play :e4
+  sleep 2/3.0 #0.666666...
+  play :g4
+  sleep 2/3.0 #0.666666...
+  play :a4
+  sleep 1
+  play :f4
+  sleep 0.5
+  play :g4
+  sleep 1
+  play :e4
+  sleep 1
+  play :c4
+  sleep 0.5
+  play :d4
+  sleep 0.5
+  play :b3
+  sleep 1
+end
+
+live_loop :play_allF do
+  sample intro
+  sleep 8
+  sample mariosoundB
+  sleep 8
+  sample mariosoundP
+  sleep 4
+  music1
+  music2
+  music3
+  sample mariosoundU
+  sleep 0.0001
+  music2
+  music3
+  sample mariosoundM
+  sleep 5
+  
+end
