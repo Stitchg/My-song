@@ -1,0 +1,103 @@
+use_bpm 160
+use_synth :saw
+define :function1and2and3 do |a, s, d, f, g, h, j, k,|
+  play a
+  sleep 0.5
+  play s
+  sleep 0.5
+  play d
+  sleep 0.5
+  play f
+  sleep 0.5
+  play g
+  sleep 0.5
+  play h
+  sleep 0.5
+  play j
+  sleep 0.5
+  play k
+  sleep 0.5
+end
+live_loop :main_theme do
+  function1and2and3 :c2,  :e2,  :g2,  :b2,  :c3,  :b2,  :g2,  :e2
+  function1and2and3 :c4,  :e4,  :g4,  :b4,  :c5,  :b4,  :g4,  :e4
+  function1and2and3 :c5,  :e5,  :g5,  :b5,  :c6,  :b5,  :g5,  :e5
+end
+
+
+
+=begin
+live_loop :main_theme do
+  with_fx :distortion do
+    #second octave
+    play :c2
+    sleep 0.5
+    play :e2
+    sleep 0.5
+    play :g2
+    sleep 0.5
+    play :b2
+    sleep 0.5
+    play :c3
+    sleep 0.5
+    play :b2
+    sleep 0.5
+    play :g2
+    sleep 0.5
+    play :e2
+    sleep 0.5
+    #third octave
+    play :c3
+    sleep 0.5
+    play :e3
+    sleep 0.5
+    play :g3
+    sleep 0.5
+    play :b3
+    sleep 0.5
+    play :c4
+    sleep 0.5
+    play :b3
+    sleep 0.5
+    play :g3
+    sleep 0.5
+    play :e3
+    sleep 0.5
+    #fourth octave
+    play :c4
+    sleep 0.5
+    play :e4
+    sleep 0.5
+    play :g4
+    sleep 0.5
+    play :b4
+    sleep 0.5
+    play :c5
+    sleep 0.5
+    play :b4
+    sleep 0.5
+    play :g4
+    sleep 0.5
+    play :e4
+    sleep 0.5
+    #fifth octave
+    play :c5
+    sleep 0.5
+    play :e5
+    sleep 0.5
+    play :g5
+    sleep 0.5
+    play :b5
+    sleep 0.5
+    play :c6
+    sleep 0.5
+    play :b5
+    sleep 0.5
+    play :g5
+    sleep 0.5
+    play :e5
+    sleep 0.5
+  end
+end
+=end
+
