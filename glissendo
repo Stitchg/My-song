@@ -1,0 +1,40 @@
+use_synth :piano
+numl = 21
+numh = 108
+s = 0.15
+o = 0.111125
+i = 0.5
+live_loop :all do
+  88.times do
+    play(numl)
+    sleep s
+    numl = numl + 1
+  end
+  numl = 21
+  numh = 108
+  sleep i
+  88.times do
+    play(numh)
+    sleep o
+    numh = numh - 1
+  end
+  numl = 21
+  numh = 108
+  sleep i
+  88.times do
+    play(numl)
+    sleep s
+    numl = numl + 1
+  end
+  numl = 21
+  numh = 108
+  sleep i
+  88.times do
+    play(numh)
+    sleep o
+    numh = numh - 1
+  end
+  numl = 21
+  numh = 108
+  sleep i
+end
