@@ -1,0 +1,62 @@
+use_synth :piano
+use_bpm 120
+#FUNCTION DEFINITIONS
+define :function1and2 do |n|
+  play :c5
+  sleep 0.5
+  play :d5
+  sleep 0.5
+  play :e5
+  sleep 0.5
+  play :d5
+  sleep 1
+  play :c5
+  sleep 1
+  play :d5
+  sleep 1
+  play n # Only this note is different!
+  sleep 1
+  play :c5
+  sleep 1.5
+  play :r
+  sleep 1
+end
+#-------------------------music starts here-------------------------#
+#INTRO
+play :e4
+sleep 0.5
+play :f4
+sleep 0.5
+play :g4, sustain: 3
+sleep 2
+play :c5, sustain: 3
+sleep 2
+play :a4, sustain: 3
+sleep 2
+play :r
+sleep 1
+#FUNCTION CALLS
+function1and2 :d5
+function1and2 :a4
+#OUTRO
+play :a4
+sleep 1
+play :g4
+sleep 0.5
+play :c5
+sleep 1
+play :c5
+sleep 1
+play :e4
+sleep 1
+play :d4, sustain: 2
+sleep 1.5
+
+
+
+
+
+use_bpm 120
+lyrics = ["Come", "A-long,"  "with", "me", "to", "a", "town", "beside", "the", "sea", "we", "can", "wander", "through", "the", "forest", "and", "do", "so", "as", "we", "please", ]
+x = 0
+wait = [0.5, 0.5, 2, 2, 3, 0.5, 0.5, 0.5,]
